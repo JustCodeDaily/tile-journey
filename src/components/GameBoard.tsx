@@ -174,7 +174,7 @@ export const GameBoard = () => {
 
         {/* Game Over Screen */}
         {gameOver && (
-          <div className="fixed inset-0 bg-background backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in z-50">
+          <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in z-50">
             <div className="bg-card rounded-2xl p-8 max-w-md w-full shadow-glow border border-border">
               <div className="text-center space-y-6">
                 {won ? (
