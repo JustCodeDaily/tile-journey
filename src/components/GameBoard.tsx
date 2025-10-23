@@ -54,11 +54,16 @@ export const GameBoard = () => {
   const initializeGame = () => {
     const shuffledSteps = Object.entries(gameSteps).map(([_, step]) => {
       const trueOption = step.true[Math.floor(Math.random() * step.true.length)];
-      const trapOption = step.trap[Math.floor(Math.random() * step.trap.length)];
+      
+      // Pick 2 different trap options
+      const shuffledTraps = shuffleArray([...step.trap]);
+      const trap1 = shuffledTraps[0];
+      const trap2 = shuffledTraps[1];
       
       const options = shuffleArray([
         { text: trueOption, isCorrect: true },
-        { text: trapOption, isCorrect: false }
+        { text: trap1, isCorrect: false },
+        { text: trap2, isCorrect: false }
       ]);
 
       return {
@@ -169,7 +174,7 @@ export const GameBoard = () => {
 
         {/* Game Over Screen */}
         {gameOver && (
-          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in z-50">
+          <div className="fixed inset-0 bg-background backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in z-50">
             <div className="bg-card rounded-2xl p-8 max-w-md w-full shadow-glow border border-border">
               <div className="text-center space-y-6">
                 {won ? (
