@@ -6,28 +6,25 @@ import { toast } from "sonner";
 
 const gameSteps = {
   step_1: {
-    true: ["in progress"],
-    trap: ["build failed", "Dev went for sick"]
+    true: ["Wow! You picked it to Develop"],
+    trap: ["Wrong Estimation - Meet Shereen for Training Estimation", 
+      "Blocked by other Dev whom you blocked. So Bye!"]
   },
   step_2: {
-    true: ["in test"],
-    trap: ["AC failed", "-7 out of 126 tests passed"]
+    true: ["Bingo! You pushed to DEV"],
+    trap: ["Aaah, Yuri wants you write more test cases", "Runners ran for a date, come back tomorrow"]
   },
   step_3: {
-    true: ["all test passed"],
-    trap: ["not responsive", "works only on DEV machine"]
+    true: ["OMG!!! Surpassed PO"],
+    trap: ["PO did not had coffee, so pushing back to WIP", "Not working when PO is testing"]
   },
   step_4: {
-    true: ["PO Passed"],
-    trap: ["AC Changed", "PO OOO"]
+    true: ["Pushing to Prod in Progress...."],
+    trap: ["You Crashed the market. Rollback Please...", "Friday Syndrome happened today, So sorry dude."]
   },
   step_5: {
-    true: ["in progress"],
-    trap: ["build failed", "build failed successfully"]
-  },
-  step_6: {
-    true: ["push to prod"],
-    trap: ["hot fix needed", "deployed on Friday Error"]
+    true: ["You made it!"],
+    trap: ["Deployed to wrong market. Are you high?", "DXL Ditched you, better luck next time"]
   }
 };
 
