@@ -69,6 +69,7 @@ export const GameBoard = () => {
       };
     });
 
+    console.log(shuffledSteps)
     setSteps(shuffledSteps);
     setCurrentStep(0);
     setGameOver(false);
